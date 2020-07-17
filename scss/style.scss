@@ -1,0 +1,93 @@
+@import 'normalize';
+@import 'fonts';
+@import 'variables';
+@import 'modal';
+
+body {
+    font-family: "Brown";
+    font-weight: 300;
+}
+
+.container {
+    max-width: 1215px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 48px;
+    line-height: 62px;
+    color: $color_text_darker;
+}
+
+.desc {
+    line-height: 32px;
+    color: $color_text_lighter;
+    font-size: 23px;
+}
+
+.button {
+    padding: 5px 20px 8px;
+    color: $color_text_light;
+    font-size: 19px;
+    font-weight: 700;
+    background-color: $color_main;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+        background: linear-gradient(0deg, rgba(132, 92, 255, 1) 20%, rgba(255, 255, 255, 1) 135%);
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    &:hover::after {
+        opacity: 1;
+    }
+
+    span {
+        position: relative;
+        z-index: 3;
+    }
+}
+
+.link {
+    font-size: 19px;
+    font-weight: normal;
+    line-height: 39px;
+    margin-left: 30px;
+    padding-right: 20px;
+    color: $color_text_darker;
+    position: relative;
+    transition: 0.3s;
+
+    &::after {
+        position: absolute;
+        font-family: "icomoon";
+        font-size: 12px;
+        content: "\ea3c";
+        top: 63%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+
+    &:hover {
+        padding-right: 25px;
+    }
+}
+
+
+@import 'header';
+@import 'improve';
+@import 'proof';
+@import 'advantages';
+@import 'auto-pilot';
+@import 'form';
+@import 'footer';

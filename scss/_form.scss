@@ -1,0 +1,128 @@
+.form {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 130px;
+    }
+
+    &__text {
+        max-width: 470px;
+    }
+
+    &__title {
+        margin-bottom: 35px;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            top: -50px;
+            left: 0;
+            width: 50px;
+            height: 10px;
+            background-image: url(../img/figures.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &__body {
+        padding: 30px 20px 30px 40px;
+        border-radius: 10px;
+        box-shadow: 0px 7px 18px -6px #d2d2d2;
+        min-width: 495px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        input {
+            min-width: 360px;
+            font-family: "Brown";
+            font-weight: 300;
+            color: $color_text_lighter;
+            font-size: 23px;
+            line-height: 46px;
+            letter-spacing: 0.1px;
+        }
+    }
+
+    &__enter {
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 46px;
+        letter-spacing: 0.1px;
+        color: $color_main;
+        padding-right: 30px;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            height: 17px;
+            width: 20px;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            background-image: url(../img/enter.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+}
+
+@media (max-width: 1290px) {
+    .form {
+        &__container {
+            padding: 0 30px;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .form {
+        &__inner {
+            display: block;
+        }
+
+        &__text {
+            margin: 0 auto 30px;
+        }
+
+        &__body {
+            min-width: 0;
+            max-width: 390px;
+            margin: 0 auto;
+        }
+
+        &__enter {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .form {
+        &__title {
+            font-size: 30px;
+            line-height: 33px;
+            margin-bottom: 20px;
+        }
+
+        &__desc {
+            font-size: 15px;
+            line-height: 25px;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .form {
+        &__body {
+            input {
+                max-width: 70vw;
+                min-width: max-content;
+            }
+        }
+    }
+}

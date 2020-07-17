@@ -1,0 +1,170 @@
+.advantages {
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;  
+        margin-bottom: 260px;
+        
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__item-text {
+        min-height: 450px;
+        max-width: 545px;
+    }
+
+    &__title {
+        margin-bottom: 45px;
+    }
+    
+    &__desc {
+        margin-bottom: 45px;
+    }
+
+    &__item-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 55px;
+    }
+
+    &__item-drive {
+        max-width: 193px;
+    }
+
+    &__item-drive-title {
+        font-size: 30px;
+        
+    }
+
+    &__item-drive-desc {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    &__item-ride {
+        max-width: 193px;
+    }
+
+    &__item-ride-title {
+        font-size: 30px;
+    }
+
+    &__item-ride-desc {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    &__item-img-1 {
+        background-image: url(../img/advantages/1.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        min-height: 450px;
+        min-width: 645px;
+    }
+
+    &__item-img-2 {
+        background-image: url(../img/advantages/2.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        min-height: 450px;
+        min-width: 645px;
+    }
+}
+
+@media (max-width: 1290px) {
+    .advantages {
+        &__container {
+            padding: 0 30px;
+        }
+    }
+}
+
+@media (max-width: 1180px) {
+    .advantages {
+        &__item {
+            flex-direction: column-reverse;
+
+            &:nth-child(even) {
+                flex-direction: column-reverse;
+            }
+
+            &-img-1 {
+                margin-bottom: 130px;
+            }
+
+            &-img-2 {
+                margin-bottom: 130px;
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .advantages {
+        &__item {
+
+            &-text {
+                text-align: center;
+            }
+
+            &-img-1 {
+                min-width: 80vw;
+                min-height: 80vw;
+                margin-bottom: 0;
+            }
+
+            &-img-2 {
+                min-width: 80vw;
+                min-height: 80vw;
+                margin-bottom: 0;
+            }
+        }
+
+        &__button {
+            display: block;
+            margin: 40px auto;
+        }
+    }
+}
+
+@media (max-width: 460px) {
+    .advantages {
+        &__item {
+            &-box {
+                display: block;
+                margin: 0 auto;
+            }
+
+            &-drive {
+                max-width: 100%;
+                margin-bottom: 30px;
+            }
+
+            &-ride {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    .advantages {
+        &__title {
+            font-size: 30px;
+            line-height: 40px;
+        }
+
+        &__desc {
+            font-size: 18px;
+            line-height: 25px;
+        }
+
+        &__link {
+            font-size: 14px;
+        }
+    }
+}

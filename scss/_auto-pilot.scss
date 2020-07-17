@@ -1,0 +1,132 @@
+.auto-pilot {
+    position: relative;
+    margin-bottom: 300px;
+
+    &:after {
+        position: absolute;
+        content: '';
+        top: 0;
+        right: 0;
+        width: 860px;
+        height: 630px;
+        background-image: url(../img/auto-pilot/1.png);
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
+
+    &__text {
+        max-width: 665px;
+        min-height: 180px;
+        padding-top: 60px;
+        margin-bottom: 160px;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        min-height: 235px;
+        max-width: 625px;
+        flex-basis: 50%;
+        margin-bottom: 80px;
+    }
+
+    &__item-title {
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 60px;
+        color: $color_text_darker;
+    }
+
+    &__item-list {
+        font-size: 17px;
+        line-height: 62px;
+        color: $color_text_darker;
+
+        li {
+            padding-left: 40px;
+            position: relative;
+
+            &:before {
+                position: absolute;
+                content: '';
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+                width: 20px;
+                height: 20px;
+                background-image: url(../img/auto-pilot/check.png);
+            }
+        }
+    }
+}
+
+@media (max-width: 1290px) {
+    .auto-pilot {
+        &__container {
+            padding: 0 30px;
+        }
+    }
+}
+
+@media (max-width: 1180px) {
+    .auto-pilot {
+        background-color: rgba(255, 255, 255, 0.829);
+        border-radius: 10px;
+
+        &__text {
+            max-width: 80%;
+            margin: 0 auto 160px;
+            text-align: center;
+        }
+
+        &__items {
+            display: block;
+        }
+
+        &__item {
+            margin: 0 auto 80px;
+            max-width: 535px;
+
+            &-title {
+                text-align: center;
+            }
+
+            &-clear {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .auto-pilot {
+        &__title {
+                font-size: 30px;
+            }
+
+        &__desc {
+            font-size: 15px;
+            line-height: 25px;
+        }
+
+        &__item {
+            &-list {
+                line-height: 20px;
+
+                li {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
